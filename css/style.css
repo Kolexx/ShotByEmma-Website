@@ -9,7 +9,8 @@ nav ul li {
   margin: 10px 20px;
 }
 
-.hero {
+/*hero section*/
+#hero {
   background-image: url(../img/Canon-HD-Pictures-04332.jpg);
   background-size: cover;
   background-position: top center;
@@ -17,7 +18,7 @@ nav ul li {
   z-index: 1;
   height: 100vh;
 }
-.hero::after {
+#hero::after {
   content: ' ';
   position: absolute;
   top: 0;
@@ -28,15 +29,201 @@ nav ul li {
   opacity: 0.7;
   z-index: -1;
 }
-.hero .hero1 {
+#hero .hero {
   max-width: 1200px;
-  margin: 0 100px;
-  padding: 0 100px;
+  margin: 0 auto;
+  padding: 0 50px;
   justify-content: flex-start;
 }
-h1 {
-  color: darkgray;
+#hero h1:nth-child(1) {
+  animation-delay: 1s;
 }
-h3 {
-  color: darkgray;
+.light {
+  color: red;
+}
+#hero h1:nth-child(2) {
+  animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) {
+  animation: myOwnAnimationName 0.5s ease forwards;
+  animation-delay: 2.5s;
+}
+#hero h1 {
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  padding: 5px;
+  animation: myOwnAnimation 0.5s ease forwards;
+  animation-delay: 1s;
+}
+#hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: red;
+  animation: myAnimation 1s ease;
+  animation-delay: 0.3 s;
+}
+#hero h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) span {
+  animation-delay: 1s;
+}
+#hero h1:nth-child(3) span {
+  animation-delay: 1.5s;
+}
+.cta {
+  display: inline;
+  padding: 5px 20px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid red;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  margin-top: 30px;
+  transition: 0.3s ease background-color;
+  transition-property: background-color, color;
+  /* margin-bottom: 30px; */
+}
+.cta:hover {
+  color: white;
+  background-color: red;
+}
+@keyframes myAnimation {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+@keyframes myOwnAnimation {
+  100% {
+    color: white;
+  }
+}
+@keyframes myOwnAnimationName {
+  100% {
+    color: red;
+    font-weight: 500px;
+  }
+}
+a {
+  text-decoration: none;
+  /* to remove the line under 'portfolio' */
+}
+/*end of hero section*/
+
+.social-icon {
+  display: flex;
+  margin-bottom: 30px;
+  float: left;
+}
+.icon {
+  margin-top: 50%;
+  margin: 0 10px 0 0;
+}
+.social-item:hover {
+  color: white;
+  background-color: red;
+}
+body {
+  margin-top: 20px;
+}
+
+/* Feature Box
+---------------------*/
+.feature-box-1 {
+  padding: 32px;
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  margin: 15px 0;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  -moz-transition: ease all 0.35s;
+  -o-transition: ease all 0.35s;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+  top: 0;
+}
+.feature-box-1 * {
+  -moz-transition: ease all 0.35s;
+  -o-transition: ease all 0.35s;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+}
+.feature-box-1 .icon {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  background: red;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 22px;
+  font-size: 27px;
+}
+.feature-box-1 .icon i {
+  line-height: 70px;
+}
+.feature-box-1 h5 {
+  color: black;
+  font-weight: 600;
+}
+
+.feature-box-1:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  border-radius: 10px;
+  width: 0;
+  background: black;
+  z-index: -1;
+  -moz-transition: ease all 0.35s;
+  -o-transition: ease all 0.35s;
+  -webkit-transition: ease all 0.35s;
+  transition: ease all 0.35s;
+}
+.feature-box-1:hover {
+  top: -5px;
+}
+.feature-box-1:hover h5 {
+  color: #ffffff;
+}
+.feature-box-1:hover p {
+  color: rgba(255, 255, 255, 0.8);
+}
+.feature-box-1:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  left: 0;
+  right: auto;
+}
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+.section-title {
+  padding-bottom: 45px;
+}
+.section-title h2 {
+  font-weight: 700;
+  color: black;
+  font-size: 45px;
+  margin: 0 0 15px;
+  border-left: 5px solid red;
+  padding-left: 15px;
 }
